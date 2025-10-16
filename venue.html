@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue - Fourth Meeting Gruppo di Attività ANA&A SIMAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ---------- Custom styles just for this page ---------- */
+        .venue-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            padding: 4rem 2rem;
+            flex-wrap: wrap;
+        }
+        .venue-map iframe {
+            border: 0;
+            width: 420px;
+            height: 320px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .venue-info {
+            max-width: 420px;
+            text-align: left;
+        }
+        .venue-info h2 {
+            font-size: 1.3rem;
+            color: #2F2F2F;
+            margin-bottom: 0.5rem;
+        }
+        .venue-info p {
+            margin: 0.3rem 0;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .venue-info a {
+            color: #D35400;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .venue-info a:hover {
+            color: #a63d00;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Fourth Meeting Gruppo di Attività ANA&A - SIMAI</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="lecturers.html" class="nav-link">Speakers</a></li>
+                <li><a href="participants.html" class="nav-link">Participants</a></li>
+                <li><a href="program.html" class="nav-link">Program</a></li>
+                <li><a href="social-dinner.html" class="nav-link">Social Dinner</a></li>
+                <li><a href="venue.html" class="nav-link active">Venue</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Venue</h1>
+            </div>
+        </section>
+
+        <section class="venue-section">
+            <div class="venue-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.526366054056!2d7.6855449!3d45.0679593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d6f946ee985%3A0x2c4699ab6818bce4!2sUniversity%20of%20Turin!5e0!3m2!1sen!2sit!4v1734364800000!5m2!1sen!2sit" 
+                    allowfullscreen 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="venue-info">
+                <h2>Dipartimento di Matematica "Giuseppe Peano"</h2>
+                <p><strong>Università di Torino</strong></p>
+                <p>Via Carlo Alberto, 10, 10123 Torino, Italy</p>
+                <p>
+                    <a href="https://www.google.com/maps/place/University+of+Turin/@45.0679593,7.6855449,17z/data=!3m1!4b1!4m6!3m5!1s0x47886d6f946ee985:0x2c4699ab6818bce4!8m2!3d45.0679593!4d7.6855449!16s%2Fg%2F119wntbf7?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        GPS Location
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
