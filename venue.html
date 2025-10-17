@@ -6,7 +6,7 @@
     <title>Venue - Fourth Meeting Gruppo di Attività ANA&A SIMAI</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* ---------- Custom styles just for this page ---------- */
+        /* Ajustes específicos de estilo para Venue */
         .venue-section {
             display: flex;
             justify-content: center;
@@ -15,6 +15,7 @@
             padding: 4rem 2rem;
             flex-wrap: wrap;
         }
+
         .venue-map iframe {
             border: 0;
             width: 420px;
@@ -22,25 +23,31 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .venue-info {
             max-width: 420px;
             text-align: left;
         }
+
         .venue-info h2 {
-            font-size: 1.3rem;
+            font-size: 1.35rem; /* un poco más grande */
             color: #2F2F2F;
             margin-bottom: 0.5rem;
+            white-space: nowrap; /* evita salto de línea */
         }
+
         .venue-info p {
             margin: 0.3rem 0;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #333;
         }
+
         .venue-info a {
             color: #D35400;
             text-decoration: underline;
             font-weight: 500;
         }
+
         .venue-info a:hover {
             color: #a63d00;
         }
@@ -86,7 +93,7 @@
 
             <div class="venue-info">
                 <h2>Department of Mathematics "Giuseppe Peano"</h2>
-                <p><strong>Torino University</strong></p>
+                <p><strong>University of Torino</strong></p>
                 <p>Via Carlo Alberto, 10, 10123 Torino, Italy</p>
                 <p>
                     <a href="https://www.google.com/maps/place/University+of+Turin/@45.0679593,7.6855449,17z/data=!3m1!4b1!4m6!3m5!1s0x47886d6f946ee985:0x2c4699ab6818bce4!8m2!3d45.0679593!4d7.6855449!16s%2Fg%2F119wntbf7?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
@@ -96,6 +103,22 @@
             </div>
         </section>
     </main>
+
+    <footer class="home-footer">
+        <div class="footer-logos">
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <img src="torinologo.png" alt="Università di Torino Logo" class="footer-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="uninetlogo.png" alt="UNINETTUNO Logo" class="footer-logo">
+                </div>
+            </div>
+            <div class="logo-item logo-center">
+                <img src="simailogo.png" alt="SIMAI Logo" class="footer-logo simai-logo">
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
