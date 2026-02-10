@@ -6,17 +6,39 @@
   <title>Social Dinner - Fourth Meeting Gruppo di Attività ANA&A SIMAI</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Misma estructura que en la sección Venue */
+    .dinner-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .dinner-map iframe {
+      border: 0;
+      width: 420px;
+      height: 320px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
     .dinner-info {
-      max-width: 600px;
-      margin: 5rem auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #2F2F2F;
+      max-width: 420px;
       text-align: left;
     }
 
+    .dinner-info h2 {
+      font-size: 1.35rem;
+      color: #2F2F2F;
+      margin-bottom: 0.5rem;
+    }
+
     .dinner-info p {
-      margin-bottom: 0.6rem;
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      color: #333;
     }
 
     .dinner-info a {
@@ -61,17 +83,25 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="dinner-info">
-          <p><strong>Ristorante “LA NUOVA SPADA REALE”</strong></p>
-          <p>Via Principe Amedeo 53, Torino – 011 8173509</p>
-          <p>
-            <a href="https://www.google.com/maps/search/La+Spada+Reale+Torino" target="_blank">
-              Google map: La Spada Reale
-            </a>
-          </p>
-        </div>
+    <section class="dinner-section">
+      <div class="dinner-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.9034739500156!2d7.689900015408308!3d45.065777039536495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d639901b05d%3A0xbb37b70e947cd911!2sLa%20Spada%20Reale!5e0!3m2!1sen!2sit!4v1702067000000!5m2!1sen!2sit"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="dinner-info">
+        <h2>Ristorante “LA NUOVA SPADA REALE”</h2>
+        <p>Via Principe Amedeo 53, Torino</p>
+        <p>Tel: 011.8173509</p>
+        <p>
+          <a href="https://www.google.it/maps/place/La+Spada+Reale/@45.065777,7.6903862,17z/data=!3m1!4b1!4m6!3m5!1s0x47886d639901b05d:0xbb37b70e947cd911!8m2!3d45.065777!4d7.6929611!16s%2Fg%2F1whdh6_4?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            Google map: La Spada Reale
+          </a>
+        </p>
       </div>
     </section>
   </main>
