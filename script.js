@@ -2,12 +2,13 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger?.addEventListener('click', () => {
+hamburger?.addEventListener('click', (e) => {
+  e.stopPropagation();
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
 });
 
-// Close menu after click
+// Close menu after clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger?.classList.remove('active');
@@ -15,33 +16,27 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      const topOffset = target.offsetTop - 50;
-      window.scrollTo({ top: topOffset, behavior: 'smooth' });
-    }
-  });
+// Close menu when tapping outside
+document.addEventListener('click', (e) => {
+  const target = e.target;
+  const clickedInsideMenu = navMenu?.contains(target);
+  const clickedHamburger = hamburger?.contains(target);
+
+  if (!clickedInsideMenu && !clickedHamburger) {
+    hamburger?.classList.remove('active');
+    navMenu?.classList.remove('active');
+  }
 });
 
-// Highlight active link
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const sections = document.querySelectorAll('section[id]');
-  let current = '';
+// Smooth scroll only for anchors that exist on the page
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const href = anchor.getAttribute('href');
+    const target = href ? document.querySelector(href) : null;
+    if (!target) return; // if not on this page, do nothing
 
-  sections.forEach(sec => {
-    const sectionTop = sec.offsetTop - 200;
-    if (scrollY >= sectionTop) current = sec.getAttribute('id');
-  });
-
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+    e.preventDefault();
+    const topOffset = target.offsetTop - 80;
+    window.scrollTo({ top: topOffset, behavior: 'smooth' });
   });
 });
