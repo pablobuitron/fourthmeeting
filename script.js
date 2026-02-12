@@ -40,3 +40,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top: topOffset, behavior: 'smooth' });
   });
 });
+
+const closeMenu = () => {
+  document.querySelector('.hamburger')?.classList.remove('active');
+  document.querySelector('.nav-menu')?.classList.remove('active');
+};
+window.addEventListener('resize',closeMenu);
+window.addEventListener('orientationchange',closeMenu);

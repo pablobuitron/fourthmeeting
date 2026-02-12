@@ -545,3 +545,14 @@ main {
 }
 
 
+.navbar, .nav-menu, .hamburger {
+  pointer-events: auto;
+}
+
+.navbar{
+  z-index: 999999 !important;
+}
+
+.nav-menu{
+  z-index: 999999 !important;
+}
