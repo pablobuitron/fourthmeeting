@@ -384,3 +384,128 @@ main {
     max-width: 180px;
   }
 }
+
+
+/* =========================
+   MOBILE NAV FIX (IMPORTANT)
+   ========================= */
+.hamburger{
+  display: none;            /* desktop: hidden */
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger .bar{
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #F4F4F4;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Optional hamburger animation */
+.hamburger.active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+
+  /* Navbar becomes top bar */
+  .navbar{
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .nav-container{
+    width: 100%;
+    height: 72px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .nav-logo{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .nav-logo h2{
+    font-size: 0.95rem;
+    line-height: 1.15;
+    max-width: 70vw;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger{
+    display: block;
+  }
+
+  /* Hide menu by default on mobile */
+  .nav-menu{
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #2F2F2F;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0.75rem 1rem;
+    margin: 0;
+    list-style: none;
+
+    /* key: hidden state */
+    display: none;
+
+    /* key: if many items, allow scrolling */
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+
+    /* keeps above content */
+    z-index: 2000;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active{
+    display: flex;
+  }
+
+  .nav-link{
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-left: 4px solid transparent;
+    letter-spacing: 1.5px;
+    font-size: 0.95rem;
+  }
+
+  /* Content below navbar */
+  main{
+    margin-left: 0;
+    padding-top: 72px;
+  }
+
+  /* page header needs to respect left margin removal */
+  .page-header{
+    margin-left: 0;
+    padding: 5.5rem 1.5rem 3rem;
+  }
+
+  /* homepage footer & any custom footers (if present) */
+  .home-footer{
+    margin-left: 0;
+  }
+}
