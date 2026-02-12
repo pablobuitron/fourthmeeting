@@ -509,3 +509,39 @@ main {
     margin-left: 0;
   }
 }
+
+/* =========================
+   VENUE + DINNER: mobile sizing fix
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Map should be responsive */
+  .venue-map iframe,
+  .dinner-map iframe{
+    width: 100% !important;
+    max-width: 520px !important;
+    height: 240px !important;
+  }
+
+  /* Ensure section doesn't look "huge" and stays tight */
+  .venue-section,
+  .dinner-section{
+    gap: 1.5rem !important;
+    padding: 2rem 1.25rem !important;
+  }
+
+  /* Avoid overflowing titles on small screens */
+  .venue-info h2,
+  .dinner-info h2{
+    white-space: normal !important;
+    font-size: 1.2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .venue-info,
+  .dinner-info{
+    max-width: 520px !important;
+  }
+}
+
+
