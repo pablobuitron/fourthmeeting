@@ -556,3 +556,24 @@ main {
 .nav-menu{
   z-index: 999999 !important;
 }
+
+.hero-button {
+    margin-top: 20px;
+}
+
+.hero-button a {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.hero-button a:hover {
+    background: linear-gradient(135deg, #005bb5, #004999);
+    transform: translateY(-2px);
+}
