@@ -6,11 +6,35 @@
   <title>Program - Fourth Meeting Gruppo di Attività ANA&A SIMAI</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .placeholder {
+    .pdf-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 900px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .pdf-note {
       text-align: center;
-      font-size: 1.3rem;
+      margin-top: 1rem;
+      font-size: 1rem;
       color: #555;
-      padding: 6rem 2rem;
+    }
+
+    .pdf-note a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .pdf-note a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -20,18 +44,16 @@
       <div class="nav-logo">
         <h2>Fourth Meeting Gruppo di Attività ANA&A - SIMAI</h2>
       </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <!-- <li><a href="lecturers.html" class="nav-link">Speakers</a></li> -->
-                <!-- <li><a href="participants.html" class="nav-link">Participants</a></li> -->
-                <li><a href="program.html" class="nav-link">Program</a></li>
-                <li><a href="local-committee.html" class="nav-link">Local Organizing Committee</a></li>
-                <li><a href="proceedings.html" class="nav-link">Proceedings</a></li>
-                <li><a href="registration.html" class="nav-link">Registration</a></li>
-                <li><a href="social-dinner.html" class="nav-link">Social Dinner</a></li>
-                <li><a href="venue.html" class="nav-link">Venue</a></li>
-            </ul>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="program.html" class="nav-link">Program</a></li>
+        <li><a href="local-committee.html" class="nav-link">Local Organizing Committee</a></li>
+        <li><a href="proceedings.html" class="nav-link">Proceedings</a></li>
+        <li><a href="registration.html" class="nav-link">Registration</a></li>
+        <li><a href="social-dinner.html" class="nav-link">Social Dinner</a></li>
+        <li><a href="venue.html" class="nav-link">Venue</a></li>
+      </ul>
       <div class="hamburger">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </div>
@@ -47,7 +69,13 @@
 
     <section class="section">
       <div class="container">
-        <p class="placeholder">Info coming soon.</p>
+        <div class="pdf-container">
+          <iframe src="program.pdf" class="pdf-frame"></iframe>
+          <p class="pdf-note">
+            If the program does not display correctly, you can open it
+            <a href="program.pdf" target="_blank">here</a>.
+          </p>
+        </div>
       </div>
     </section>
   </main>
